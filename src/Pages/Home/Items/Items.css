@@ -1,0 +1,33 @@
+.items-container h1 {
+    text-align: center;
+    color: #1f1d1d;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 540px) {
+    .services {
+        grid-template-columns: repeat(1, 1fr);
+        width: 83%;
+    }
+}
+
+@media only screen and (min-width: 541px) and (max-width: 1024px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 1290px) {
+    .services {
+        width: 75%;
+    }
+}
