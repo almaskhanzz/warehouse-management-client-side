@@ -5,6 +5,7 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
+import Loading from './Pages/Shared/Loading/Loading';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/login' element={< Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/loading' element={< Loading />} />
       </Routes>
       <Footer />
     </div>
