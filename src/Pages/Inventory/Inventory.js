@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import './Inventory.css';
 const Inventory = () => {
@@ -65,6 +65,10 @@ const Inventory = () => {
                 data.reset();
             })
     };
+    const navigate = useNavigate();
+    const navigateManage = () => {
+        navigate('/manageinventories');
+    }
     return (
         <div className='w-50 mx-auto mb-3'>
             <h1 className='text-center mt-3 mb-4'>Details of the Inventory Item:</h1>
@@ -88,6 +92,9 @@ const Inventory = () => {
                         <input className='w-50 mt-3 bg-primary rounded border-0 p-2 text-white mx-auto' type="submit" value="Update Quantity" />
                     </form>
                 </div>
+            </div>
+            <div className='d-flex justify-content-center'>
+                <button onClick={navigateManage} className='w-50 mt-3 bg-success rounded border-0 p-2 text-white'>Manage Inventories</button>
             </div>
         </div>
     );
