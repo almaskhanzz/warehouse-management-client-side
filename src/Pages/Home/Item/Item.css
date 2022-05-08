@@ -25,3 +25,25 @@ p {
     margin-bottom: 0;
     margin-top: 3px;
 }
+
+.item button {
+    background-image: linear-gradient(to right, #292f35 0%, #2b476f 51%, #15212c 100%)
+}
+
+.item button {
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #ffffff;
+    box-shadow: 0 0 20px #eee;
+    border: none;
+    border-radius: 10px;
+}
+
+.item button:hover {
+    background-position: right center;
+    color: rgb(185, 206, 203);
+    text-decoration: none;
+    cursor: pointer;
+}

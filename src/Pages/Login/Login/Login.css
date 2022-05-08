@@ -1,0 +1,31 @@
+.login-container {
+    width: 50%;
+}
+
+.log-reg-color {
+    color: rgb(42, 22, 56)
+}
+
+.reset-password {
+    cursor: pointer;
+    color: #6f4440;
+}
+
+.btn-button {
+    background-color: #8bdcf7;
+    ;
+    color: rgb(6, 29, 48);
+    font-size: 20px;
+    border: none;
+    padding: 8px 0;
+    border-radius: 5px;
+}
+
+.btn-button:hover {
+    background-color: #80d5ef;
+}
+
+.register-hov {
+    cursor: pointer;
+    color: #6f1919;
+}

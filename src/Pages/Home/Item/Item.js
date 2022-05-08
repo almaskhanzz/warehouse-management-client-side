@@ -11,6 +11,7 @@ const Item = ({ item }) => {
                 <h5 >{quantity}</h5>
                 <h5 >{supplierName}</h5>
                 <p >{description}</p>
+                <button className='w-75 d-block mx-auto'>Stock Update</button>
             </div>
         </div>
     );

@@ -15,6 +15,7 @@ const Header = () => {
                         <Nav>
                             <Nav.Link className='text-white fs-5' as={Link} to="/add">Add</Nav.Link>
                             <Nav.Link className='text-white fs-5' as={Link} to="/delete">Delete</Nav.Link>
+                            <Nav.Link className='text-white fs-5' as={Link} to="/login">Login</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
