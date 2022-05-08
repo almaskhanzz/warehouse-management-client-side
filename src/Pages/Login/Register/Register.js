@@ -1,9 +1,31 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 import './Register.css';
 const Register = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate();
+
+    if (user) {
+        navigate('/home');
+        console.log('user', user);
+    }
+
+    const handleRegister = event => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        createUserWithEmailAndPassword(email, password);
+
+    }
 
     const handleNavigateLogin = () => {
         navigate('/login');
@@ -11,7 +33,7 @@ const Register = () => {
     return (
         <div className='register-container mx-auto my-4'>
             <h1 className='log-reg-color text-center'>Please Register</h1>
-            <Form>
+            <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>
                     <Form.Control name='name' type="text" placeholder="Enter your name" required />
