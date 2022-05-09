@@ -1,0 +1,8 @@
+.blog-container {
+    width: 75%;
+    background-color: rgb(246, 253, 254);
+}
+
+.q-a p {
+    text-align: justify;
+}

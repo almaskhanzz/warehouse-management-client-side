@@ -31,6 +31,10 @@ const ManageInventories = () => {
                 })
         }
     }
+    const handleUpdate = id => {
+        // console.log(id);
+        navigate(`/manageinventories/updateItem/${id}`);
+    }
     return (
         <div className='manage-container'>
             <h1 className='text-center mt-3'>Manage Inventories</h1>
@@ -43,6 +47,7 @@ const ManageInventories = () => {
                         </div>
                         <div className='d-flex justify-content-center mb-3'>
                             <button onClick={() => handleDelete(item._id)} className='manage-delete px-4 py-1 fs-5'>Delete</button>
+                            <button onClick={() => handleUpdate(item._id)} className='manage-update px-4 py-1 ms-5 fs-5'>Update</button>
                         </div>
                     </div>)
                 }

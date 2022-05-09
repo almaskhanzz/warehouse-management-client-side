@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import './Inventory.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 const Inventory = () => {
     const { inventoryId } = useParams();
+    // console.log(inventoryId);
     const { register, handleSubmit } = useForm();
     const [item, setItem] = useState([]);
     useEffect(() => {
@@ -50,7 +53,7 @@ const Inventory = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert('Item updated successfully!!!');
+                toast('Item updated successfully!!!');
             })
     };
     const navigate = useNavigate();
@@ -68,6 +71,7 @@ const Inventory = () => {
                 <h3 className='text-center'>Name: {item.name}</h3>
                 <h4 className='text-center'>Price: {item.price}</h4>
                 <h4 className='text-center'>Quantity: {item.quantity}</h4>
+                <h4 className='text-center'>Sold: {item.sold}</h4>
                 <h3 className='text-center'>Supplier Name: {item.supplierName}</h3>
                 <p className='fs-5 text-success mb-2 mt-2'>Description: {item.description}</p>
                 <div className='d-flex justify-content-center'>
@@ -84,6 +88,7 @@ const Inventory = () => {
             <div className='d-flex justify-content-center'>
                 <button onClick={navigateManage} className='w-50 mt-3 bg-success rounded border-0 p-2 text-white'>Manage Inventories</button>
             </div>
+            <ToastContainer />
         </div>
     );
 };

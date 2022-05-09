@@ -26,9 +26,10 @@ const Header = () => {
                                 user && <>
                                     <Nav.Link className='text-white fs-5' as={Link} to="/manageinventories">Manage Items</Nav.Link>
                                     <Nav.Link className='text-white fs-5' as={Link} to="/addnewitem">Add Item</Nav.Link>
-                                    <Nav.Link className='text-white fs-5' as={Link} to="/myitem">My Items</Nav.Link>
+                                    <Nav.Link className='text-white fs-5' as={Link} to="/myitems">My Items</Nav.Link>
                                 </>
                             }
+                            <Nav.Link className='text-white fs-5' as={Link} to="/blogs">Blogs</Nav.Link>
                             {
                                 user ?
                                     <Button onClick={handleLogout} className='text-decoration-none text-white fs-5' variant="link">Logout</Button>

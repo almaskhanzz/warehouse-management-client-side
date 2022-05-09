@@ -10,7 +10,7 @@ const Items = () => {
     }, []);
     return (
         <div className='items-container pt-3'>
-            <h1>Inventory Items: {items.length}</h1>
+            <h1>Inventory Items</h1>
             <div className='items'>
                 {
                     items.slice(0, 6).map(item => <Item

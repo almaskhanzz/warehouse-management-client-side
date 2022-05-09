@@ -38,9 +38,18 @@
 .manage-delete {
     border: none;
     border-radius: 15px;
-    background-color: rgb(17, 47, 56);
-    color: antiquewhite;
-    width: 100px;
+    /* background-color: rgb(17, 47, 56); */
+    background-color: rgb(57, 2, 2);
+    color: rgb(255, 235, 232);
+    width: 110px;
+}
+
+.manage-update {
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(7, 58, 47);
+    color: rgb(250, 222, 215);
+    width: 110px;
 }
 
 .manage-add {
@@ -49,4 +58,24 @@
     background-color: rgb(4, 57, 77);
     color: bisque;
     /* width: 200px; */
+}
+
+@media only screen and (max-width: 540px) {
+    .manage {
+        grid-template-columns: repeat(1, 1fr);
+        width: 83%;
+    }
+}
+
+@media only screen and (min-width: 541px) and (max-width: 1024px) {
+    .manage {
+        grid-template-columns: repeat(2, 1fr);
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 1290px) {
+    .manage {
+        width: 75%;
+    }
 }
