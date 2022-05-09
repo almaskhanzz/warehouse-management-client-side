@@ -8,14 +8,14 @@ const UpdateItem = () => {
 
     const [updateItem, setUpdateItem] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5000/item/${updateId}`;
+        const url = `https://pure-wave-99844.herokuapp.com/item/${updateId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setUpdateItem(data))
     }, [])
 
     const onSubmit = data => {
-        const url = `http://localhost:5000/item/${updateId}`;
+        const url = `https://pure-wave-99844.herokuapp.com/item/${updateId}`;
         fetch(url, {
             method: 'PUT',
             headers: {

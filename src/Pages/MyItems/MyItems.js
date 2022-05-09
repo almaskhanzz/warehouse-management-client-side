@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const MyItems = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/item')
+        fetch('https://pure-wave-99844.herokuapp.com/item')
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);

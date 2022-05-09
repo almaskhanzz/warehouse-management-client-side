@@ -8,7 +8,7 @@ const AddNewItem = () => {
 
     const onSubmit = data => {
         // console.log(data);
-        const url = `http://localhost:5000/item`;
+        const url = `https://pure-wave-99844.herokuapp.com/item`;
         fetch(url, {
             method: 'POST',
             headers: {

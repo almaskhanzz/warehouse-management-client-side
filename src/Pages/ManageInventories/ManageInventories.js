@@ -6,7 +6,7 @@ const ManageInventories = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/item')
+        fetch('https://pure-wave-99844.herokuapp.com/item')
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);
@@ -17,7 +17,7 @@ const ManageInventories = () => {
         // console.log(id);
         const proceed = window.confirm('Are you sure! You want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://pure-wave-99844.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'Delete'
             })

@@ -10,7 +10,7 @@ const Inventory = () => {
     const { register, handleSubmit } = useForm();
     const [item, setItem] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5000/item/${inventoryId}`;
+        const url = `https://pure-wave-99844.herokuapp.com/item/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -23,7 +23,7 @@ const Inventory = () => {
         const quantities = { newQuantity };
         console.log(quantities);
 
-        const url = `http://localhost:5000/item/${inventoryId}`;
+        const url = `https://pure-wave-99844.herokuapp.com/item/${inventoryId}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -40,7 +40,7 @@ const Inventory = () => {
     //Update quantity
     const onSubmit = data => {
         // console.log(data);
-        const url = `http://localhost:5000/item/${inventoryId}`;
+        const url = `https://pure-wave-99844.herokuapp.com/item/${inventoryId}`;
         fetch(url, {
             //PUT for updating...
             method: 'PUT',
