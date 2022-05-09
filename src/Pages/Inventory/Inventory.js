@@ -6,20 +6,12 @@ const Inventory = () => {
     const { inventoryId } = useParams();
     const { register, handleSubmit } = useForm();
     const [item, setItem] = useState([]);
-    const [quantity, setQuantity] = useState({});
     useEffect(() => {
         const url = `http://localhost:5000/item/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
-    }, []);
-
-    useEffect(() => {
-        const url = `http://localhost:5000/item/${inventoryId}`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setQuantity(data))
-    }, []);
+    }, [item]);
 
     const handleDelivered = id => {
         // console.log(id);
@@ -59,7 +51,6 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => {
                 alert('Item updated successfully!!!');
-                data.reset();
             })
     };
     const navigate = useNavigate();

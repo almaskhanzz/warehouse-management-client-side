@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import './Register.css';
+import Loading from '../../Shared/Loading/Loading';
 const Register = () => {
     const [
         createUserWithEmailAndPassword,
@@ -23,7 +24,7 @@ const Register = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        createUserWithEmailAndPassword(email, password);
+        createUserWithEmailAndPassword(email, password)
 
     }
 
@@ -51,6 +52,10 @@ const Register = () => {
                     Register
                 </button>
             </Form>
+            <p className='text-danger mt-2'>{error?.message}</p>
+            {
+                loading && <Loading />
+            }
             <p className='mt-3'>Already have an account? <span className='register-hov' onClick={handleNavigateLogin} >Please Login</span></p>
         </div>
     );
