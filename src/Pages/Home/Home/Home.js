@@ -13,7 +13,7 @@ const Home = () => {
             <img className='w-100' src={banner} alt="" />
             <Items />
             <div className='d-flex justify-content-center mb-3'>
-                <button onClick={navigateManage} className='w-50 mt-3 bg-success rounded border-0 p-2 text-white'>Manage Inventories</button>
+                <button onClick={navigateManage} className='manage-inv my-4 px-5 py-2 fs-4'>Manage Inventories</button>
             </div>
         </div>
     );

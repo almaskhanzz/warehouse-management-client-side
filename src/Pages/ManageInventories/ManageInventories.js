@@ -4,6 +4,7 @@ import './ManageInventories.css';
 const ManageInventories = () => {
     const navigate = useNavigate();
     const [items, setItems] = useState([]);
+
     useEffect(() => {
         fetch('http://localhost:5000/item')
             .then(res => res.json())
@@ -11,6 +12,24 @@ const ManageInventories = () => {
     }, []);
     const navigateAddItem = () => {
         navigate('/addnewitem');
+    }
+    const handleDelete = id => {
+        // console.log(id);
+        const proceed = window.confirm('Are you sure! You want to delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/item/${id}`;
+            fetch(url, {
+                method: 'Delete'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        console.log("deleted successfully");
+                        const remainingItems = items.filter(item => item._id !== id);
+                        setItems(remainingItems);
+                    }
+                })
+        }
     }
     return (
         <div className='manage-container'>
@@ -23,7 +42,7 @@ const ManageInventories = () => {
                             <img src={item.img} alt="" />
                         </div>
                         <div className='d-flex justify-content-center mb-3'>
-                            <button className='manage-delete px-4 py-1 fs-5'>Delete</button>
+                            <button onClick={() => handleDelete(item._id)} className='manage-delete px-4 py-1 fs-5'>Delete</button>
                         </div>
                     </div>)
                 }
