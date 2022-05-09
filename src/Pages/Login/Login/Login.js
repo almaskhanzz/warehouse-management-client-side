@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
 const Login = () => {
     const navigate = useNavigate();
@@ -51,6 +52,7 @@ const Login = () => {
                 loading && <Loading />
             }
             <p className='mt-3'>Don't have an account? <span className='register-hov' onClick={handleNavigateRegister}>Please Register</span></p>
+            <SocialLogin />
         </div>
     );
 };

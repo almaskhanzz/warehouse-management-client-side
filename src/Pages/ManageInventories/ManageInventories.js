@@ -18,7 +18,7 @@ const ManageInventories = () => {
                             <img src={item.img} alt="" />
                         </div>
                         <div className='d-flex justify-content-center mb-3'>
-                            <button className=''>Delete</button>
+                            <button className='manage-delete px-4 py-1'>Delete</button>
                         </div>
                     </div>)
                 }

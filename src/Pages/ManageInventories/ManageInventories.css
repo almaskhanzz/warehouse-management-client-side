@@ -12,8 +12,9 @@
 }
 
 .manage-item {
-    border: 2px solid rgb(32, 33, 39);
+    border: none;
     border-radius: 15px;
+    background-color: rgb(251, 243, 233);
 }
 
 .item-info {
@@ -23,8 +24,18 @@
 
 }
 
+.item-info h3 {
+    color: rgb(38, 33, 26);
+}
+
 .item-info img {
     width: 70px;
     border-radius: 50%;
     margin-left: 20px;
+}
+
+.manage-delete {
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(66, 200, 249);
 }
