@@ -49,7 +49,7 @@ const Home = () => {
                 </div>
 
             </div>
-            <div className='mb-5 mx-5 mt-5 d-flex justify-content-center'>
+            <div className='mb-5 about-sec mx-5 mt-5 d-flex justify-content-center'>
                 <div className='about-us'>
                     <h1>ABOUT US</h1>
                     <p>

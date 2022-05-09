@@ -34,3 +34,35 @@
 /* .forms {
     width: 60%;
 } */
+
+@media only screen and (max-width: 540px) {
+    .services {
+        grid-template-columns: repeat(1, 1fr);
+        width: 83%;
+    }
+
+    .about-sec {
+        flex-direction: column;
+    }
+
+    .about-us {
+        width: 90%;
+    }
+
+    .feedback {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 541px) and (max-width: 1024px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 1290px) {
+    .services {
+        width: 75%;
+    }
+}
