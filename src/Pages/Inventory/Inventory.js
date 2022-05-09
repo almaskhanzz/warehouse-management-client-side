@@ -46,10 +46,7 @@ const Inventory = () => {
     }
     //Update quantity
     const onSubmit = data => {
-        console.log(data);
-        //send data to the server...
-        //search mdn fetch post
-        //sending data
+        // console.log(data);
         const url = `http://localhost:5000/item/${inventoryId}`;
         fetch(url, {
             //PUT for updating...

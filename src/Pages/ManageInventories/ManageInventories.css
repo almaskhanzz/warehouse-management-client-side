@@ -13,8 +13,9 @@
 
 .manage-item {
     border: none;
-    border-radius: 15px;
-    background-color: rgb(251, 243, 233);
+    /* border-radius: 15px; */
+    background-color: rgb(247, 250, 250);
+    box-shadow: 0 2px 6px 0 #cfd3d7, 0 4px 10px 0 #cfd3d7;
 }
 
 .item-info {
@@ -25,7 +26,7 @@
 }
 
 .item-info h3 {
-    color: rgb(38, 33, 26);
+    color: rgb(74, 44, 3);
 }
 
 .item-info img {
@@ -37,5 +38,15 @@
 .manage-delete {
     border: none;
     border-radius: 15px;
-    background-color: rgb(66, 200, 249);
+    background-color: rgb(17, 47, 56);
+    color: antiquewhite;
+    width: 100px;
+}
+
+.manage-add {
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(4, 57, 77);
+    color: bisque;
+    /* width: 200px; */
 }
