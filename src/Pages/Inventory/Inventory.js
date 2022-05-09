@@ -20,8 +20,6 @@ const Inventory = () => {
         // console.log(id);
         const previousQuantity = parseInt(item.quantity);
         const newQuantity = previousQuantity - 1;
-        // setQuantity(newQuantity);
-        // console.log(newQuantity);
         const quantities = { newQuantity };
         console.log(quantities);
 
